@@ -79,10 +79,10 @@ def detectCycle(head):
 + **代码：**
 ```python
 def getIntersectionNode(headA, headB):
-	if not headA or not headB: return
-	pa, pb = headA, headB
-	while pa != pb:
-		pa = pa.next if pa else headB
-		pb = pb.next if pb else headA
-	return pa
+    if not headA or not headB: return
+    pa, pb = headA, headB
+    while pa != pb:
+        pa = pa.next if pa else headB
+        pb = pb.next if pb else headA
+    return pa
 ```
