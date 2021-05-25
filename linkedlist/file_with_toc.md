@@ -1,4 +1,4 @@
-<a name="index">**Index**</a>
+<a name="index"></a>
 &emsp;<a href="#0">链表题目一</a>  
 &emsp;&emsp;<a href="#1">141. 环形链表</a>  
 &emsp;&emsp;<a href="#2">142. 环形链表 II</a>  
