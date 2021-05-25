@@ -14,7 +14,7 @@
 		+ 你能用 O(1)（即，常量）内存解决此问题吗？
 + **解析：**
 
-![](https://github.com/betterest8830/coding/blob/main/linkedlist/images/a1.png)
+![a1.png](https://i.loli.net/2021/05/25/AC1FnYqvrZJbtad.png)
 
 > Follow your heart.
 

@@ -25,7 +25,8 @@ def creat_directory_line(line,headline_mark,i):
 def creat_directory(f):
     i = 0
     directory = []
-    directory.append('<a name="index">**Index**</a>\n')
+    #directory.append('<a name="index">**Index**</a>\n')
+    directory.append('<a name="index"></a>\n')
     for line in f:
         lines_in_file.append(line)
     f.close()
@@ -45,10 +46,12 @@ def creat_directory(f):
     return directory
 
 """以目录列表为参数生成添加目录的文件"""
-def creat_file_with_toc(f):
+def creat_file_with_toc(f, filename):
     directory = creat_directory(f)
-    file_with_toc = os.getcwd() + '\\file_with_toc.md'
-    if not os.path.exists(file_with_toc):
+    file_with_toc = os.getcwd() + filename
+    file_with_toc = file_with_toc.replace('README', 'NEW_README')
+    #if not os.path.exists(file_with_toc):
+    if True:
         with open(file_with_toc, 'w+',encoding='utf-8') as f:
             for directory_line in directory:
                 f.write(directory_line)
@@ -62,6 +65,9 @@ if __name__=='__main__':
     file_name = ''
     #如果未传入文件名
     if len(sys.argv) < 2:
+        print('参数错误：请传入文件')
+        os._exit(0)
+        '''
         path = os.getcwd()
         file_and_dir = os.listdir(path)
         md_file = []
@@ -77,11 +83,12 @@ if __name__=='__main__':
             print('该目录下无Markdown文件，即将退出...')
             time.sleep(2)
             os._exit(0)
+        '''
     else:
         file_name = sys.argv[1]
     if os.path.exists(file_name) and os.path.isfile(file_name):
         with open(file_name,'r',encoding='utf-8') as f:
-            creat_file_with_toc(f)
+            creat_file_with_toc(f, file_name)
     else:
         msg = "未找到文件"
         print(msg)
