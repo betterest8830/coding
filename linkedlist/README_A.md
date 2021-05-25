@@ -14,6 +14,10 @@
 		+ 你能用 O(1)（即，常量）内存解决此问题吗？
 + **解析：**
 
+![](https://github.com/betterest8830/coding/blob/main/linkedlist/READMEa.md/images/a1.PNG)
+
+> Follow your heart.
+
 + **代码：**
 ```python
 def hasCycle(head):
